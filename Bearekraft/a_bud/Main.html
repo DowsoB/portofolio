@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longos - Sustainability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .cat {
+            padding: 20px 40px;
+            box-sizing: none;
+            background-color: #efefef;
+        }
+
+        .cat:hover {
+            background-color: #d8dbda;
+        }
+
+        footer {
+            margin-top: 0px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .feature {
+            box-shadow: 0px 4px 8px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .cat {
+                padding: 20px 20px;
+            }
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <img src="Kirkeparken.svg" alt="">
+        <div>Bærekraft for en bedre fremtid</div>
+        <div class="row">
+            <a href="galleri.html" class="galleri">Galleri</a>
+            <a href="loginn.html" class="sendin">Logg in</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Gjøre bærekraft til en prioritet</h1>
+        <p class="miniom">
+            Longos er forpliktet til å fremme miljøvennlig praksis og øke bevisstheten om bærekraft for en grønnere
+            morgen.
+        </p>
+        <p id="move" class="miniom">
+            Vi ville ønket at dere kunne sendt in noe bilder av naturen
+        </p>
+        <div>
+            <a href="omoss.html" class="btn">Om oss</a>
+            <a href="loginn.html" class="btn">Sende in bilder</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h2>Miljøvennlige initiativ</h2>
+            <p>Finn ut hvordan vi støtter bærekraftig livsstil og miljøvennlige prosjekter.</p>
+        </div>
+        <div class="card">
+            <h2>Resirkulering og avfallshåndtering</h2>
+            <p>Finn ressurser på riktige resirkuleringsteknikker og strategier for avfallsreduksjon.</p>
+        </div>
+        <div class="card">
+            <h2>Klima</h2>
+            <p>Oppdag hvordan bærekraftsarbeid utgjør en forskjell over hele verden.</p>
+        </div>
+    </section>
+
+    <div class="animation-container">
+        <div class="trashcan">
+            <div class="lid"></div>
+            <div class="line"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <div class="trash"></div>
+    </div>
+
+    <section class="feature">
+        <div class="cat">
+            <h4>Strøm</h4>
+            <p>I dagens samfunn bruker vi mer strøm enn noen gang før. Teknologien utvikler seg raskt, og det er viktig
+                å finne bærekraftige måter å produsere og bruke energi på.</p>
+        </div>
+        <div class="cat">
+            <h4>Søppel</h4>
+            <p>Det er viktig å kaste avfall i søppelkasser og ikke på gaten. Riktig avfallshåndtering bidrar til et
+                renere og sunnere miljø.</p>
+        </div>
+        <div class="cat">
+            <h4>Samfunnet</h4>
+            <p>Et bærekraftig samfunn er et som tar vare på både mennesker og miljø. Vi må jobbe sammen for å skape en
+                bedre fremtid for alle.</p>
+        </div>
+        <div class="cat">
+            <h4>Ressurser</h4>
+            <p>Våre naturressurser er begrensede, og det er viktig å bruke dem på en ansvarlig måte. Gjenvinning og
+                gjenbruk er nøkkelen til å bevare ressursene for fremtidige generasjoner.</p>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        &copy;
+        <script>
+            document.write(new Date().getFullYear());
+            document.write(" Kirkeparken vidregående skole. ");
+            document.write(new Date().toLocaleDateString('No-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+        </script>
+    </footer>
+</body>
+
+</html>

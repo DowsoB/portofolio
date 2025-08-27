@@ -1,0 +1,296 @@
+#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid 5px black;
+    background-color: #2775B8;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    order: 1;
+    flex-basis: 100%;
+    height: 75px;
+    padding-bottom: 45px;
+    text-align: center;
+    color: #48C636;
+    font-family: skank;
+    border-bottom: solid 5px black;
+}
+
+nav{
+    order: 2;
+    flex-basis: 100%;
+    background-color: #2C81A6;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 5px black;
+}
+
+main{
+    order: 3;
+    flex-basis: 100%;
+    background-color: #4CD123;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    order: 4;
+    flex-basis: 100%;
+    height: 40px;
+    background-color: rgb(120, 182, 218);
+    text-align: center;
+    color: rgb(120, 230, 103);
+}
+
+body{
+  background-color: rgb(255, 255, 0);
+}
+
+.itembox {
+  border: 1px solid black;
+}
+
+.matboks{
+    display: flex;
+    flex-basis: 300px;
+    flex-grow: 1;
+    background-color: #318C93;
+    height: auto;
+    padding: 7px 10px;
+    color: rgb(133, 247, 169);
+}
+
+.boks{
+    border: solid 3px black;
+    width: 50%;
+    flex-grow: 1;
+    height: auto;
+    background-color: #4CD123;
+    color:#000000;
+    padding: 5px;
+    transition: border 0.3s, color 0.3s;
+    text-align: center;
+    border-radius: 12.5%;
+}
+.boks img{ 
+  width: 95%;
+  height: auto;
+  align-items: center;
+  border-radius: 25%;
+}
+.boks:hover{
+    border: solid 3px white;
+    width: 50%;
+    flex-grow: 1;
+    height: auto;
+    background-color: chartreuse;
+    padding: 5px;
+}
+.bokstekst{
+  font-size: x-large;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+#bokstekst{
+  font-size: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.sokbar{
+    width: 100%;
+    max-width: 300px;
+    background: #2775B8;
+    display: flex;
+    align-items: left;
+    border-radius: 40px;
+    border: solid 3px black;
+    padding: 10px 20px;
+    margin-right: 10px;
+    backdrop-filter: blur(4px) saturate(180%);
+}
+.sokbar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 10px 1px;
+    font-size: 20px;
+    color: #4CD123;
+}
+
+.sokbar ::placeholder{
+  color: #4CD123;
+}
+
+.sokbar button img{
+    width: 20px;
+    margin-right: 2px;
+}
+
+.sokbar button{
+    border: solid 2px chartreuse;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #3e9723;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.sokbar button:hover{
+    background-color: #4CD123;
+}
+
+.knapp {
+    background-color: #0b57d0;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: 20px;
+    margin-left: 540px;
+    margin-right: 180px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+.knapp:hover {
+    background-color: #003f00;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: block;
+    width: 100px;
+    text-align: center;
+    margin: 20px;
+    margin-left: 540px;
+    margin-right: 180px;
+    }
+    .knappi {
+      background-color: #0b57d0;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: block;
+      width: 100px;
+      text-align: center;
+      transition: background-color 0.3s, color 0.3s;
+      margin-top: 5px;
+    }
+  .knappi:hover {
+      background-color: #003f00;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: block;
+      width: 100px;
+      text-align: center;
+      margin-top: 5px;
+      }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #318C93;
+  color: black;
+  margin: 1% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 3px solid #000000;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content img{
+  width: 350px;
+  height: auto;
+  border-radius: 25%;
+}
+
+/* The Close Button */
+.close, .close2, .close3, .close4, .close5, .close6, .close7, .close8, .close9 {
+  color: #000000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 100px;
+}
+
+.close:hover, .close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .close7:hover, .close8:hover, .close9:hover{
+  color: rgb(99, 99, 99);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#smul{
+  width: 50px;
+  height: 50px;
+}
+
+#smol{
+  width: 200px;
+  height: 200px;
+}
+
+#smoll{
+  width: 200px;
+  height: 200px;
+}
+
+    
+    @font-face{
+        font-family: skank;
+        src: url(Skranji-Bold.ttf)
+    }
+    @keyframes backgroundAnimation {
+        0% {
+          background-color: rgb(255, 255, 0);
+        }
+        10%{
+          background-color: rgb(235, 235, 0);
+        }
+        25% {
+          background-color: rgb(205, 205, 0);
+        }
+        35%{
+          background-color: rgb(175, 175, 0);
+        }
+        50% {
+          background-color: rgb(150, 150, 0);
+        }
+        65% {
+          background-color: rgb(175, 175, 0);
+        }
+        75% {
+          background-color: rgb(205, 205, 0);
+        }
+        90% {
+          background-color: rgb(235, 235, 0);
+        }
+        100% {
+          background-color: rgb(255, 255, 0);
+        }
+
+      }

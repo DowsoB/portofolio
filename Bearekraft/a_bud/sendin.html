@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longos - Sustainability</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: white;
+            height: 100%;
+        }
+
+        .file-input {
+            display: block;
+            text-decoration: none;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+
+        .file-input:hover {
+            border-color: #007BFF;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .cat {
+            width: 60%;
+        }
+
+        .hero {
+            box-shadow: none;
+            margin-bottom: 97px;
+        }
+
+        .image-preview {
+            display: block;
+            margin: 20px auto;
+            max-height: 300px;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+
+            .hero {
+                margin-bottom: 169px;
+            }
+
+            .image-preview {
+                max-width: 300px;
+            }
+
+        }
+
+        @media (min-width: 768px) {
+
+            input {
+                width: 600px;
+            }
+
+        }
+
+        @media (min-width: 1280px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            footer {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+
+            input {
+                height: 40px;
+                padding: 5px;
+                border-radius: 10px;
+                font-size: 20px;
+            }
+
+            .btn {
+                background-color: #2c6e49;
+                color: white;
+                border: none;
+
+                padding: 15px 30px;
+                font-size: 24px;
+                border-radius: 10px;
+            }
+
+            .file-input {
+                margin: 15px auto;
+                padding: auto;
+                border-radius: 10px;
+                font-size: 18px;
+            }
+
+            .image-preview {
+                max-height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="Kirkeparken.svg" alt="">
+        <div>Bærekraft for en bedre fremtid</div>
+        <a href="Main.html" class="sendin">Tilbake</a>
+    </header>
+
+    <section class="hero">
+        <h1>Send inn noe :)</h1>
+        <form action="submit_image.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" class="file-input" id="fileInput">
+            <img id="imagePreview" class="image-preview" alt="Image Preview" style="display: none;">
+            <input type="text" placeholder="info"> <br>
+        </form>
+        <a href="Main.html" class="btn">Upload Image</a>
+    </section>
+
+    <footer>
+        &copy;
+        <script>
+            document.write(new Date().getFullYear());
+            document.write(" Kirkeparken vidregående skole. ");
+            document.write(new Date().toLocaleDateString('No-GB', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+        </script>
+    </footer>
+
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const imagePreview = document.getElementById('imagePreview');
+
+        fileInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
