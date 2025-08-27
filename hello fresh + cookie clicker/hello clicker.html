@@ -11,80 +11,80 @@
 <body>
     <div class="sectionleft">
         <center>
-        <div class="powerup">
-            <button class="knapp" onclick="powerupyou()">
-                <img src="YOU.png" alt="">
-                <div id="Youcost">10</div>
-            </button>
-            <button class="knapp" onclick="powerupslave()">
-                <img src="caveman.jpg" alt="">
-                <div id="cavepower">1000</div>
-            </button>
-            <button class="knapp" onclick="powerupcat()">
-                <img src="Nolegs.jpg" alt="" >
-                <div id="leglesspower">5000</div>
-            </button>
-            <button class="knapp" onclick="powerupegg()">
-                <img src="egg.png" alt="">
-                <div id="tectone">10000</div>
-            </button>
-        </div>
-        <div class="bank">
-            <span id="money">Money: 0</span><br>
-            <span id="moneypersec">0 krones per second</span><br>
-            <span id="clickpower">Click power: 1</span>
-        </div>
+            <div class="powerup">
+                <button class="knapp" onclick="powerupyou()">
+                    <img src="bilder/YOU.png" alt="">
+                    <div id="Youcost">10</div>
+                </button>
+                <button class="knapp" onclick="powerupslave()">
+                    <img src="bilder/caveman.jpg" alt="">
+                    <div id="cavepower">1000</div>
+                </button>
+                <button class="knapp" onclick="powerupcat()">
+                    <img src="bilder/Nolegs.jpg" alt="">
+                    <div id="leglesspower">5000</div>
+                </button>
+                <button class="knapp" onclick="powerupegg()">
+                    <img src="bilder/egg.png" alt="">
+                    <div id="tectone">10000</div>
+                </button>
+            </div>
+            <div class="bank">
+                <span id="money">Money: 0</span><br>
+                <span id="moneypersec">0 krones per second</span><br>
+                <span id="clickpower">Click power: 1</span>
+            </div>
             <br>
-        <div class="clickercontainer">
-            <img src="LOGOhellofresh.png" onclick="button()">
+            <div class="clickercontainer">
+                <img src="bilder/LOGOhellofresh.png" onclick="button()">
+            </div>
+            <a href="Fresh Cookie.html" class="knappi">Tilbake</a>
+        </center>
+        <div class="sectionfotter">
+            <h5>Money clicker</h5>
         </div>
-        <a href="Fresh Cookie.html" class="knappi">Tilbake</a>
-    </center>
-    <div class="sectionfotter">
-        <h5>Money clicker</h5>
     </div>
+    <div class="sectionright">
+
+        <table class="shopbutton" onclick="buyslave()">
+            <tr>
+                <td id="image"><img src="bilder/caveman.jpg" alt=""></td>
+                <td id="nameandcost">
+                    <p>Cavemen</p>
+                    <p><span id="slavecost">Costs: 5</span></p>
+                </td>
+                <td id="amount"><span id="slave">0</span></td>
+            </tr>
+        </table>
+
+        <table class="shopbutton" onclick="buycat()">
+            <tr>
+                <td id="image"><img src="bilder/Nolegs.jpg" alt=""></td>
+                <td id="nameandcost">
+                    <p>Cats</p>
+                    <p><span id="catcost">Costs: 15</span></p>
+                </td>
+                <td id="amount"><span id="cat">0</span></td>
+            </tr>
+        </table>
+
+        <table class="shopbutton" onclick="buyegg()">
+            <tr>
+                <td id="image"><img src="bilder/egg.png" alt=""></td>
+                <td id="nameandcost">
+                    <p>Eggs</p>
+                    <p><span id="eggcost">Costs: 100</span></p>
+                </td>
+                <td id="amount"><span id="egg">0</span></td>
+            </tr>
+        </table>
     </div>
-        <div class="sectionright">
-
-            <table class="shopbutton" onclick="buyslave()">
-                <tr>
-                    <td id="image"><img src="caveman.jpg" alt=""></td>
-                    <td id="nameandcost">
-                        <p>Cavemen</p>
-                        <p><span id="slavecost">Costs: 5</span></p>
-                    </td>
-                    <td id="amount"><span id="slave">0</span></td>
-                </tr>
-            </table>
-
-            <table class="shopbutton" onclick="buycat()">
-                <tr>
-                    <td id="image"><img src="Nolegs.jpg" alt=""></td>
-                    <td id="nameandcost">
-                        <p>Cats</p>
-                        <p><span id="catcost">Costs: 15</span></p>
-                    </td>
-                    <td id="amount"><span id="cat">0</span></td>
-                </tr>
-            </table>
-
-            <table class="shopbutton" onclick="buyegg()">
-                <tr>
-                    <td id="image"><img src="egg.png" alt=""></td>
-                    <td id="nameandcost">
-                        <p>Eggs</p>
-                        <p><span id="eggcost">Costs: 100</span></p>
-                    </td>
-                    <td id="amount"><span id="egg">0</span></td>
-                </tr>
-            </table>
-        </div>
     <script>
-        let money = 0;  
+        let money = 0;
         let clicking = 1;
         let Youcost = 10;
         let You = 1;
-        
+
         let slavecost = 5;
         let slave = 0;
         let slavepower = 1000;
@@ -102,14 +102,14 @@
 
 
 
-        function button(){
+        function button() {
             if (money >= 0) {
                 money += clicking * You
-                document.getElementById("money").innerHTML = "Money: "+money;
+                document.getElementById("money").innerHTML = "Money: " + money;
             }
         }
 
-        function powerupyou(){
+        function powerupyou() {
             if (money >= Youcost) {
                 money -= Youcost;
                 if (clicking <= 1) {
@@ -117,29 +117,29 @@
                     Youcost = Math.round(Youcost * 2.5);
                 } else {
                     You *= 2;
-                Youcost = Math.round(Youcost * 2.5);
+                    Youcost = Math.round(Youcost * 2.5);
                 }
                 let ckpow = clicking * You;
-                document.getElementById("money").innerHTML = "Money: "+money;
+                document.getElementById("money").innerHTML = "Money: " + money;
                 document.getElementById("Youcost").innerHTML = Youcost;
-                document.getElementById("clickpower").innerHTML = "Click power: "+ckpow;
+                document.getElementById("clickpower").innerHTML = "Click power: " + ckpow;
             }
         }
-   
-        function buyslave(){
+
+        function buyslave() {
             if (money >= slavecost) {
                 money -= slavecost;
                 slave++;
                 slavecost = Math.round(slavecost * 1.15);
 
-                document.getElementById("money").innerHTML = "Money: "+money;
-                document.getElementById("slavecost").innerHTML = "Costs: "+slavecost;
+                document.getElementById("money").innerHTML = "Money: " + money;
+                document.getElementById("slavecost").innerHTML = "Costs: " + slavecost;
                 document.getElementById("slave").innerHTML = slave;
                 updatemoneypersec();
             }
         }
 
-        function powerupslave(){
+        function powerupslave() {
             if (money >= slavepower) {
                 money -= slavepower;
                 if (pokke <= 1) {
@@ -147,28 +147,28 @@
                     slavepower = Math.round(slavepower * 2.5);
                 } else {
                     pokke *= 2;
-                slavepower = Math.round(slavepower * 2.5);
+                    slavepower = Math.round(slavepower * 2.5);
                 }
-                document.getElementById("money").innerHTML = "Money: "+money;
+                document.getElementById("money").innerHTML = "Money: " + money;
                 document.getElementById("cavepower").innerHTML = slavepower;
                 updatemoneypersec();
             }
         }
 
-        function buycat(){
+        function buycat() {
             if (money >= catcost) {
                 money -= catcost;
                 cat++;
                 catcost = Math.round(catcost * 1.15);
 
-                document.getElementById("money").innerHTML = "Money: "+money;
-                document.getElementById("catcost").innerHTML = "Costs: "+catcost;
+                document.getElementById("money").innerHTML = "Money: " + money;
+                document.getElementById("catcost").innerHTML = "Costs: " + catcost;
                 document.getElementById("cat").innerHTML = cat;
                 updatemoneypersec();
             }
         }
 
-        function powerupcat(){
+        function powerupcat() {
             if (money >= catpower) {
                 money -= catpower;
                 if (wahaha <= 1) {
@@ -176,28 +176,28 @@
                     catpower = Math.round(catpower * 2.5);
                 } else {
                     wahaha *= 2;
-                catpower = Math.round(catpower * 2.5);
+                    catpower = Math.round(catpower * 2.5);
                 }
-                document.getElementById("money").innerHTML = "Money: "+money;
+                document.getElementById("money").innerHTML = "Money: " + money;
                 document.getElementById("leglesspower").innerHTML = catpower;
                 updatemoneypersec();
             }
         }
 
-        function buyegg(){
+        function buyegg() {
             if (money >= eggcost) {
                 money -= eggcost;
                 egg++;
                 eggcost = Math.round(eggcost * 1.15);
 
-                document.getElementById("money").innerHTML = "Money: "+money;
-                document.getElementById("eggcost").innerHTML = "Costs: "+eggcost;
+                document.getElementById("money").innerHTML = "Money: " + money;
+                document.getElementById("eggcost").innerHTML = "Costs: " + eggcost;
                 document.getElementById("egg").innerHTML = egg;
                 updatemoneypersec();
             }
         }
 
-        function powerupegg(){
+        function powerupegg() {
             if (money >= eggpower) {
                 money -= eggpower;
                 if (teccy <= 1) {
@@ -205,9 +205,9 @@
                     eggpower = Math.round(eggpower * 2.5);
                 } else {
                     teccy *= 2;
-                eggpower = Math.round(eggpower * 2.5);
+                    eggpower = Math.round(eggpower * 2.5);
                 }
-                document.getElementById("money").innerHTML = "Money: "+money;
+                document.getElementById("money").innerHTML = "Money: " + money;
                 document.getElementById("tectone").innerHTML = eggpower;
                 updatemoneypersec();
             }
@@ -222,14 +222,14 @@
             money += slave * 5 * pokke
             money += cat * 15 * wahaha
             money += egg * 100 * teccy
-            document.getElementById("money").innerHTML = "Money: "+money;
+            document.getElementById("money").innerHTML = "Money: " + money;
 
-            document.title = "You have "+money+" money"
+            document.title = "You have " + money + " money"
         }, 1000)
 
 
     </script>
-        
+
 </body>
 
 </html>
