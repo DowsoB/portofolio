@@ -21,13 +21,14 @@ header{
 }
 
 nav{
+    background-color: #2C81A6;
     order: 2;
     flex-basis: 100%;
-    background-color: #2C81A6;
     text-align: center;
     align-items: center;
-    display: flex;
     justify-content: center;
+    display: flex;
+    flex-direction: row;
     border-bottom: solid 5px black;
 }
 
@@ -102,16 +103,17 @@ body{
 }
 
 .sokbar{
-    width: 100%;
-    max-width: 300px;
-    background: #2775B8;
-    display: flex;
-    align-items: left;
-    border-radius: 40px;
-    border: solid 3px black;
-    padding: 10px 20px;
-    margin-right: 10px;
-    backdrop-filter: blur(4px) saturate(180%);
+  width: 100%;
+  max-width: 300px;
+  background: #2775B8;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 40px;
+  border: solid 3px black;
+  padding: 10px 20px;
+  margin-left: auto;
+  backdrop-filter: blur(4px) saturate(180%);
 }
 .sokbar input{
     background: transparent;
@@ -143,9 +145,28 @@ body{
 }
 .sokbar button:hover{
     background-color: #4CD123;
-}
+  }
 
-.knapp {
+  #knapp {
+    background-color: #0b57d0;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto; /* Center horizontally in nav */
+    transition: background-color 0.3s, color 0.3s;
+    transform: translateX(65%);
+  }
+  #knapp:hover {
+    background-color: #003f00;
+    color: #fff;
+  }
+  #back {
     background-color: #0b57d0;
     color: #fff;
     padding: 10px 20px;
@@ -154,24 +175,15 @@ body{
     display: block;
     width: 100px;
     text-align: center;
-    margin: 20px;
-    margin-left: 540px;
-    margin-right: 180px;
+    margin: 20px 0 20px 20px; /* 20px top, 0 right, 20px bottom, 20px left */
     transition: background-color 0.3s, color 0.3s;
+    margin-right: auto; /* Pushes to the left */
   }
-.knapp:hover {
+  #back:hover {
     background-color: #003f00;
     color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: block;
-    width: 100px;
-    text-align: center;
-    margin: 20px;
-    margin-left: 540px;
-    margin-right: 180px;
-    }
+  }
+
     .knappi {
       background-color: #0b57d0;
       color: #fff;
@@ -184,17 +196,10 @@ body{
       transition: background-color 0.3s, color 0.3s;
       margin-top: 5px;
     }
-  .knappi:hover {
+    .knappi:hover {
       background-color: #003f00;
       color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      display: block;
-      width: 100px;
-      text-align: center;
-      margin-top: 5px;
-      }
+    }
 
 /* The Modal (background) */
 .modal {
